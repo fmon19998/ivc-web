@@ -2,8 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>IVC – IMBA V CARD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- TITLE -->
+  <title>IVC – IMBA V CARD</title>
+
+  <!-- FAVICON (LOGO TAB BROWSER) -->
+  <link rel="icon" type="image/png" href="assets/icon.png">
+
+  <!-- STYLES -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -11,14 +18,15 @@
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-left">
-      <img src="assets/logo.png" class="logo">
+      <img src="assets/logo.png" alt="IVC Logo" class="logo">
       <span class="brand-text">IVC – IMBA V CARD</span>
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- HERO SECTION -->
   <section class="hero">
-    <img src="assets/logo.png" class="hero-logo">
+    <img src="assets/logo.png" alt="IVC Logo Large" class="hero-logo">
+
     <h1>CSV to vCard Converter</h1>
     <p>Convert contact lists into vCard (.VCF) instantly</p>
     <small>No login • No limit • Free forever</small>
@@ -28,21 +36,25 @@
   <section class="converter">
     <h2>Upload CSV</h2>
 
+    <!-- FILE INPUT -->
     <input type="file" id="csvFile" accept=".csv">
 
+    <!-- PASTE CSV -->
     <textarea id="csvText" placeholder="Or paste CSV data here..."></textarea>
 
+    <!-- COLUMN MAPPING -->
     <div class="mapping">
-      <label>Name Column</label>
+      <label for="nameCol">Name Column</label>
       <select id="nameCol"></select>
 
-      <label>Phone Column</label>
+      <label for="phoneCol">Phone Column</label>
       <select id="phoneCol"></select>
 
-      <label>Email Column</label>
+      <label for="emailCol">Email Column</label>
       <select id="emailCol"></select>
     </div>
 
+    <!-- ACTION -->
     <button onclick="convert()">Convert to vCard</button>
   </section>
 
@@ -55,6 +67,7 @@
     <small>All conversions are processed locally in your browser</small>
   </footer>
 
+  <!-- SCRIPT -->
   <script src="js/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IVC – IMBA V CARD</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="assets/logo.png" class="logo">
+      <span class="brand-text">IVC – IMBA V CARD</span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="assets/logo.png" class="hero-logo">
+    <h1>CSV to vCard Converter</h1>
+    <p>Convert contact lists into vCard (.VCF) instantly</p>
+    <small>No login • No limit • Free forever</small>
+  </section>
+
+  <!-- CONVERTER -->
+  <section class="converter">
+    <h2>Upload CSV</h2>
+
+    <input type="file" id="csvFile" accept=".csv">
+
+    <textarea id="csvText" placeholder="Or paste CSV data here..."></textarea>
+
+    <div class="mapping">
+      <label>Name Column</label>
+      <select id="nameCol"></select>
+
+      <label>Phone Column</label>
+      <select id="phoneCol"></select>
+
+      <label>Email Column</label>
+      <select id="emailCol"></select>
+    </div>
+
+    <button onclick="convert()">Convert to vCard</button>
+  </section>
+
+  <!-- RESULT -->
+  <section class="result" id="result"></section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 IVC – IMBA V CARD</p>
+    <small>All conversions are processed locally in your browser</small>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

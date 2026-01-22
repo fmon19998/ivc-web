@@ -4,62 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- TITLE -->
   <title>IVC – IMBA V CARD</title>
 
   <!-- FAVICON -->
   <link rel="icon" type="image/png" href="assets/icon.png">
 
-  <!-- STYLES (CACHE BUSTING) -->
-  <link rel="stylesheet" href="css/style.css?v=3">
+  <!-- CSS (CACHE BUSTING) -->
+  <link rel="stylesheet" href="css/style.css?v=4">
 </head>
 <body>
 
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-left">
-      <img src="assets/logo.png" alt="IVC Logo" class="logo">
+      <img src="assets/logo.png" class="logo">
       <span class="brand-text">IVC – IMBA V CARD</span>
     </div>
   </nav>
 
-  <!-- HERO SECTION -->
+  <!-- HERO -->
   <section class="hero">
 
-    <!-- LOGO WRAPPER (NUTUP BACKGROUND PUTIH) -->
-    <div class="logo-wrapper">
-      <img src="assets/logo.png" alt="IVC Logo Large" class="hero-logo">
-    </div>
+    <!-- 3D LOGO (NO FRAME) -->
+    <img src="assets/logo.png" alt="IVC Logo" class="hero-logo hero-3d">
 
     <h1>CSV to vCard Converter</h1>
     <p>Convert contact lists into vCard (.VCF) instantly</p>
     <small>No login • No limit • Free forever</small>
-
   </section>
 
   <!-- CONVERTER -->
   <section class="converter">
     <h2>Upload CSV</h2>
 
-    <!-- FILE INPUT -->
     <input type="file" id="csvFile" accept=".csv">
-
-    <!-- PASTE CSV -->
     <textarea id="csvText" placeholder="Or paste CSV data here..."></textarea>
 
-    <!-- COLUMN MAPPING -->
     <div class="mapping">
-      <label for="nameCol">Name Column</label>
+      <label>Name Column</label>
       <select id="nameCol"></select>
 
-      <label for="phoneCol">Phone Column</label>
+      <label>Phone Column</label>
       <select id="phoneCol"></select>
 
-      <label for="emailCol">Email Column</label>
+      <label>Email Column</label>
       <select id="emailCol"></select>
     </div>
 
-    <!-- ACTION BUTTON -->
     <button onclick="convert()">Convert to vCard</button>
   </section>
 
@@ -69,11 +60,9 @@
   <!-- FOOTER -->
   <footer>
     <p>© 2026 IVC – IMBA V CARD</p>
-    <small>All conversions are processed locally in your browser</small>
+    <small>All processing runs locally in your browser</small>
   </footer>
 
-  <!-- SCRIPT -->
   <script src="js/app.js"></script>
-
 </body>
 </html>

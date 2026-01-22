@@ -7,11 +7,11 @@
   <!-- TITLE -->
   <title>IVC – IMBA V CARD</title>
 
-  <!-- FAVICON (LOGO TAB BROWSER) -->
+  <!-- FAVICON -->
   <link rel="icon" type="image/png" href="assets/icon.png">
 
-  <!-- STYLES -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- STYLES (CACHE BUSTING) -->
+  <link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body>
 
@@ -25,11 +25,16 @@
 
   <!-- HERO SECTION -->
   <section class="hero">
-    <img src="assets/logo.png" alt="IVC Logo Large" class="hero-logo">
+
+    <!-- LOGO WRAPPER (NUTUP BACKGROUND PUTIH) -->
+    <div class="logo-wrapper">
+      <img src="assets/logo.png" alt="IVC Logo Large" class="hero-logo">
+    </div>
 
     <h1>CSV to vCard Converter</h1>
     <p>Convert contact lists into vCard (.VCF) instantly</p>
     <small>No login • No limit • Free forever</small>
+
   </section>
 
   <!-- CONVERTER -->
@@ -54,7 +59,7 @@
       <select id="emailCol"></select>
     </div>
 
-    <!-- ACTION -->
+    <!-- ACTION BUTTON -->
     <button onclick="convert()">Convert to vCard</button>
   </section>
 
@@ -69,5 +74,6 @@
 
   <!-- SCRIPT -->
   <script src="js/app.js"></script>
+
 </body>
 </html>

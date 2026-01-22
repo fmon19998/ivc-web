@@ -5,16 +5,14 @@
 
 body {
   margin: 0;
-  background: linear-gradient(135deg, #07192f, #0c2d52);
+  background: linear-gradient(135deg, #06162a, #0b2d52);
   color: #ffffff;
 }
 
-/* ======================
-   NAVBAR
-====================== */
+/* ================= NAVBAR ================= */
 .navbar {
-  background: #050f1e;
-  padding: 15px 30px;
+  background: #040d1a;
+  padding: 14px 28px;
 }
 
 .nav-left {
@@ -23,57 +21,67 @@ body {
 }
 
 .logo {
-  width: 80px;
-  margin-right: 14px;
-
-  /* blend hack */
+  width: 60px;
+  margin-right: 12px;
   mix-blend-mode: screen;
   filter: drop-shadow(0 0 6px rgba(0,160,255,.6));
 }
 
 .brand-text {
-  font-size: 18px;
   font-weight: bold;
+  font-size: 17px;
 }
 
-/* ======================
-   HERO
-====================== */
+/* ================= HERO ================= */
 .hero {
   text-align: center;
-  padding: 70px 20px;
+  padding: 80px 20px 60px;
 }
 
-/* LOGO WRAPPER (INI KUNCINYA 🔥) */
-.logo-wrapper {
-  width: 220px;
-  height: 220px;
-  margin: 0 auto 25px auto;
+/* 3D LOGO (NO FRAME) */
+.hero-3d {
+  width: 160px;
+  display: block;
+  margin: 0 auto 28px;
 
-  background: radial-gradient(
-    circle at top,
-    #0f2f55,
-    #07192f
-  );
+  transform:
+    perspective(900px)
+    rotateX(14deg)
+    rotateY(-14deg)
+    rotateZ(-6deg);
 
-  border-radius: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  filter:
+    drop-shadow(0 28px 40px rgba(0,160,255,.45))
+    drop-shadow(0 0 30px rgba(0,140,255,.7));
 
-  overflow: hidden;
-
-  box-shadow:
-    0 0 25px rgba(0,160,255,.35),
-    inset 0 0 30px rgba(0,0,0,.6);
+  animation: float3d 6s ease-in-out infinite;
 }
 
-/* LOGO ITSELF */
-.hero-logo {
-  width: 180px;
-  transform: rotate(-8deg);
-  mix-blend-mode: screen;
-  filter: drop-shadow(0 0 14px rgba(0,160,255,.8));
+@keyframes float3d {
+  0% {
+    transform:
+      perspective(900px)
+      translateY(0)
+      rotateX(14deg)
+      rotateY(-14deg)
+      rotateZ(-6deg);
+  }
+  50% {
+    transform:
+      perspective(900px)
+      translateY(-16px)
+      rotateX(18deg)
+      rotateY(-18deg)
+      rotateZ(-4deg);
+  }
+  100% {
+    transform:
+      perspective(900px)
+      translateY(0)
+      rotateX(14deg)
+      rotateY(-14deg)
+      rotateZ(-6deg);
+  }
 }
 
 .hero h1 {
@@ -83,18 +91,14 @@ body {
 
 .hero p {
   font-size: 16px;
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .hero small {
-  display: block;
-  margin-top: 8px;
-  opacity: .7;
+  opacity: 0.7;
 }
 
-/* ======================
-   CONVERTER
-====================== */
+/* ================= CONVERTER ================= */
 .converter {
   background: rgba(255,255,255,.08);
   max-width: 760px;
@@ -112,15 +116,15 @@ body {
 .converter textarea,
 .converter select {
   width: 100%;
-  margin-top: 12px;
   padding: 12px;
+  margin-top: 12px;
   border-radius: 8px;
   border: none;
   outline: none;
 }
 
 textarea {
-  height: 130px;
+  height: 140px;
 }
 
 .mapping {
@@ -132,9 +136,7 @@ textarea {
   margin-top: 12px;
 }
 
-/* ======================
-   BUTTON
-====================== */
+/* ================= BUTTON ================= */
 button {
   margin-top: 28px;
   width: 100%;
@@ -151,9 +153,7 @@ button:hover {
   opacity: .9;
 }
 
-/* ======================
-   RESULT & FOOTER
-====================== */
+/* ================= RESULT & FOOTER ================= */
 .result {
   max-width: 760px;
   margin: 30px auto;
@@ -163,6 +163,6 @@ button:hover {
 footer {
   text-align: center;
   padding: 25px;
-  opacity: .75;
+  opacity: 0.7;
   font-size: 14px;
 }

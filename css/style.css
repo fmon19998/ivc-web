@@ -6,10 +6,10 @@
 body {
   margin: 0;
   background: linear-gradient(135deg, #06162a, #0b2d52);
-  color: #ffffff;
+  color: #fff;
 }
 
-/* ================= NAVBAR ================= */
+/* NAVBAR */
 .navbar {
   background: #040d1a;
   padding: 14px 28px;
@@ -21,148 +21,82 @@ body {
 }
 
 .logo {
-  width: 60px;
-  margin-right: 12px;
-  mix-blend-mode: screen;
-  filter: drop-shadow(0 0 6px rgba(0,160,255,.6));
+  width: 50px;
+  margin-right: 10px;
 }
 
 .brand-text {
   font-weight: bold;
-  font-size: 17px;
 }
 
-/* ================= HERO ================= */
-.hero {
-  text-align: center;
-  padding: 80px 20px 60px;
+/* MAIN LAYOUT */
+.main {
+  display: flex;
+  min-height: calc(100vh - 120px);
 }
 
-/* 3D LOGO (NO FRAME) */
-.hero-3d {
-  width: 160px;
-  display: block;
-  margin: 0 auto 28px;
-
-  transform:
-    perspective(900px)
-    rotateX(14deg)
-    rotateY(-14deg)
-    rotateZ(-6deg);
-
-  filter:
-    drop-shadow(0 28px 40px rgba(0,160,255,.45))
-    drop-shadow(0 0 30px rgba(0,140,255,.7));
-
-  animation: float3d 6s ease-in-out infinite;
+/* LEFT */
+.left {
+  flex: 1;
+  padding: 60px;
 }
 
-@keyframes float3d {
-  0% {
-    transform:
-      perspective(900px)
-      translateY(0)
-      rotateX(14deg)
-      rotateY(-14deg)
-      rotateZ(-6deg);
-  }
-  50% {
-    transform:
-      perspective(900px)
-      translateY(-16px)
-      rotateX(18deg)
-      rotateY(-18deg)
-      rotateZ(-4deg);
-  }
-  100% {
-    transform:
-      perspective(900px)
-      translateY(0)
-      rotateX(14deg)
-      rotateY(-14deg)
-      rotateZ(-6deg);
-  }
+.hero-logo {
+  width: 140px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 25px rgba(0,160,255,.8));
 }
 
-.hero h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 16px;
-  opacity: 0.9;
-}
-
-.hero small {
-  opacity: 0.7;
-}
-
-/* ================= CONVERTER ================= */
 .converter {
   background: rgba(255,255,255,.08);
-  max-width: 760px;
-  margin: auto;
-  padding: 35px;
+  padding: 25px;
   border-radius: 16px;
-  backdrop-filter: blur(8px);
-}
-
-.converter h2 {
-  margin-top: 0;
+  max-width: 420px;
+  margin-top: 30px;
 }
 
 .converter input,
 .converter textarea,
 .converter select {
   width: 100%;
+  margin-top: 10px;
   padding: 12px;
-  margin-top: 12px;
   border-radius: 8px;
   border: none;
-  outline: none;
 }
 
 textarea {
-  height: 140px;
+  height: 120px;
 }
 
-.mapping {
-  margin-top: 20px;
-}
-
-.mapping label {
-  display: block;
-  margin-top: 12px;
-}
-
-/* ================= BUTTON ================= */
 button {
-  margin-top: 28px;
+  margin-top: 20px;
   width: 100%;
-  padding: 16px;
+  padding: 14px;
   background: linear-gradient(135deg, #1da1f2, #0077cc);
-  color: #fff;
   border: none;
-  border-radius: 12px;
-  font-size: 17px;
+  border-radius: 10px;
+  color: #fff;
   cursor: pointer;
 }
 
-button:hover {
-  opacity: .9;
+/* RIGHT FOTO */
+.right {
+  width: 40%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
-/* ================= RESULT & FOOTER ================= */
-.result {
-  max-width: 760px;
-  margin: 30px auto;
-  text-align: center;
+.person {
+  width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
 }
 
+/* FOOTER */
 footer {
   text-align: center;
-  padding: 25px;
-  opacity: 0.7;
-  font-size: 14px;
+  padding: 20px;
+  opacity: .7;
 }

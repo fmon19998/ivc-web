@@ -22,16 +22,13 @@ body {
   align-items: center;
 }
 
-/* LOGO NAVBAR */
 .logo {
-  width: 85px;
-  height: auto;
-  margin-right: 15px;
+  width: 80px;
+  margin-right: 14px;
 
-  /* OPSI CADANGAN HILANGIN BACKGROUND PUTIH */
-  background: transparent !important;
+  /* blend hack */
   mix-blend-mode: screen;
-  filter: drop-shadow(0 0 6px rgba(0,160,255,0.7));
+  filter: drop-shadow(0 0 6px rgba(0,160,255,.6));
 }
 
 .brand-text {
@@ -40,22 +37,43 @@ body {
 }
 
 /* ======================
-   HERO SECTION
+   HERO
 ====================== */
 .hero {
   text-align: center;
-  padding: 60px 20px;
+  padding: 70px 20px;
 }
 
-/* LOGO HERO BESAR */
-.hero-logo {
-  width: 200px;
-  margin-bottom: 20px;
+/* LOGO WRAPPER (INI KUNCINYA 🔥) */
+.logo-wrapper {
+  width: 220px;
+  height: 220px;
+  margin: 0 auto 25px auto;
 
-  /* OPSI CADANGAN HILANGIN BACKGROUND PUTIH */
-  background: transparent !important;
+  background: radial-gradient(
+    circle at top,
+    #0f2f55,
+    #07192f
+  );
+
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 0 25px rgba(0,160,255,.35),
+    inset 0 0 30px rgba(0,0,0,.6);
+}
+
+/* LOGO ITSELF */
+.hero-logo {
+  width: 180px;
+  transform: rotate(-8deg);
   mix-blend-mode: screen;
-  filter: drop-shadow(0 0 12px rgba(0,160,255,0.8));
+  filter: drop-shadow(0 0 14px rgba(0,160,255,.8));
 }
 
 .hero h1 {
@@ -65,25 +83,25 @@ body {
 
 .hero p {
   font-size: 16px;
-  opacity: 0.9;
+  opacity: .9;
 }
 
 .hero small {
   display: block;
   margin-top: 8px;
-  opacity: 0.7;
+  opacity: .7;
 }
 
 /* ======================
-   CONVERTER BOX
+   CONVERTER
 ====================== */
 .converter {
-  background: rgba(255,255,255,0.08);
+  background: rgba(255,255,255,.08);
   max-width: 760px;
   margin: auto;
   padding: 35px;
-  border-radius: 14px;
-  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
 }
 
 .converter h2 {
@@ -103,7 +121,6 @@ body {
 
 textarea {
   height: 130px;
-  resize: vertical;
 }
 
 .mapping {
@@ -113,7 +130,6 @@ textarea {
 .mapping label {
   display: block;
   margin-top: 12px;
-  font-size: 14px;
 }
 
 /* ======================
@@ -126,17 +142,17 @@ button {
   background: linear-gradient(135deg, #1da1f2, #0077cc);
   color: #fff;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 17px;
   cursor: pointer;
 }
 
 button:hover {
-  opacity: 0.9;
+  opacity: .9;
 }
 
 /* ======================
-   RESULT
+   RESULT & FOOTER
 ====================== */
 .result {
   max-width: 760px;
@@ -144,12 +160,9 @@ button:hover {
   text-align: center;
 }
 
-/* ======================
-   FOOTER
-====================== */
 footer {
   text-align: center;
   padding: 25px;
-  opacity: 0.75;
+  opacity: .75;
   font-size: 14px;
 }

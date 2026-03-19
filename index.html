@@ -8,18 +8,23 @@
 <link rel="icon" href="assets/icon.png">
 <link rel="stylesheet" href="css/style.css">
 
-<!-- ⭐ ONE SIGNAL PUSH -->
-<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+<!-- ⭐ ONE SIGNAL FINAL -->
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
 <script>
 window.OneSignal = window.OneSignal || [];
+
 OneSignal.push(function() {
-  OneSignal.init({
-    appId: "ISI_APP_ID_LO_DISINI",
-    notifyButton: {
-      enable: true,
-    },
-    allowLocalhostAsSecureOrigin: true
-  });
+
+OneSignal.init({
+appId: "ISI_APP_ID_LO",
+notifyButton: { enable: true },
+allowLocalhostAsSecureOrigin: true
+});
+
+setTimeout(function(){
+OneSignal.showSlidedownPrompt();
+},3000);
+
 });
 </script>
 
@@ -27,61 +32,54 @@ OneSignal.push(function() {
 
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar">
-  <div class="nav-left">
-    <img src="assets/logo.png" class="logo">
-    <span class="brand-text">IVC – IMBA V CARD</span>
-  </div>
+<div class="nav-left">
+<img src="assets/logo.png" class="logo">
+<span class="brand-text">IVC – IMBA V CARD</span>
+</div>
 </nav>
 
-<!-- MAIN -->
 <section class="main">
 
-  <div class="left">
+<div class="left">
 
-    <img src="assets/logo.png" class="hero-logo">
+<img src="assets/logo.png" class="hero-logo">
 
-    <h1>CSV to vCard Converter</h1>
-    <p>Convert contact lists into vCard (.VCF) instantly</p>
-    <small>No login • No limit • Free forever</small>
+<h1>CSV to vCard Converter</h1>
+<p>Convert contact lists into vCard (.VCF) instantly</p>
+<small>No login • No limit • Free forever</small>
 
-    <div class="converter">
-      <h2>Upload CSV</h2>
+<div class="converter">
+<h2>Upload CSV</h2>
 
-      <input type="file" id="csvFile" accept=".csv">
-      <textarea id="csvText" placeholder="Or paste CSV data here..."></textarea>
+<input type="file" id="csvFile" accept=".csv">
+<textarea id="csvText" placeholder="Or paste CSV data here..."></textarea>
 
-      <label>Name Column</label>
-      <select id="nameCol"></select>
+<label>Name Column</label>
+<select id="nameCol"></select>
 
-      <label>Phone Column</label>
-      <select id="phoneCol"></select>
+<label>Phone Column</label>
+<select id="phoneCol"></select>
 
-      <button onclick="convert()">Convert to vCard</button>
-    </div>
+<button onclick="convert()">Convert to vCard</button>
+</div>
 
-    <div id="result"></div>
+<div id="result"></div>
 
-  </div>
+</div>
 
-  <div class="right">
-    <img src="assets/person.png" class="person">
-  </div>
+<div class="right">
+<img src="assets/person.png" class="person">
+</div>
 
 </section>
 
 <footer>
-  © 2026 IVC – IMBA V CARD<br>
-  <small>All processing runs locally in your browser</small>
+© 2026 IVC – IMBA V CARD<br>
+<small>All processing runs locally in your browser</small>
 </footer>
 
-<!-- JS WEBSITE -->
 <script src="js/app.js"></script>
-
-<!-- ⭐ SENDPULSE CHAT POPUP -->
-<script async src="https://static.sppopups.com/assets/loader.js"
-data-chats-widget-id="ec00a7d0-c03f-4ce8-b3f8-04d237080450"></script>
 
 </body>
 </html>
